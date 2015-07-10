@@ -2,3 +2,5 @@
 !.gitignore
 !vim/vimrc
 !vim/conf
+!zsh/.zshrc
+
