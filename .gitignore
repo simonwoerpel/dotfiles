@@ -2,6 +2,6 @@
 !.gitignore
 !vim/vimrc
 !vim/conf
-!zsh/.zshrc
-!zsh/custom/virtualenv-auto-activate.sh
+!zshrc
+!oh-my-zsh/custom/virtualenv-auto-activate.sh
 
