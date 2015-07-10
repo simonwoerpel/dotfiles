@@ -3,4 +3,5 @@
 !vim/vimrc
 !vim/conf
 !zsh/.zshrc
+!zsh/custom/virtualenv-auto-activate.sh
 
