@@ -22,7 +22,7 @@ Plugin 'ervandew/supertab'
 Plugin 'fholgado/minibufexpl.vim'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-sensible'
+" Plugin 'tpope/vim-sensible'
 Plugin 'majutsushi/tagbar'
 " csv
 Plugin 'chrisbra/csv.vim'
@@ -44,6 +44,9 @@ Plugin 'scrooloose/syntastic'
 
 " " python
 Plugin 'davidhalter/jedi-vim'
+
+" jinja2
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 
 " All of your Plugins must be added before the following line
