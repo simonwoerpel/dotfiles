@@ -140,7 +140,7 @@ au bufread,bufnewfile ~/BrainDump/* set ft=vimboy syntax=markdown
 
 " TAGBAR
 " mapping
-nmap <F8> :TagbarToggle<CR>
+nmap <F9> :TagbarToggle<CR>
 
 " SOURCE
 source ~/.vim/conf/autocomplete
