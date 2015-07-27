@@ -22,7 +22,7 @@ Plugin 'ervandew/supertab'
 Plugin 'fholgado/minibufexpl.vim'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'airblade/vim-gitgutter'
-" Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-sensible'
 Plugin 'majutsushi/tagbar'
 " csv
 Plugin 'chrisbra/csv.vim'

@@ -16,3 +16,5 @@ augroup vimrc_autocmds
     autocmd FileType html set sts=2
     augroup END
 
+" https://github.com/tell-k/vim-autopep8
+let g:autopep8_max_line_length=119
