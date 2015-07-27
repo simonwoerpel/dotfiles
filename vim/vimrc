@@ -44,6 +44,7 @@ Plugin 'scrooloose/syntastic'
 
 " " python
 Plugin 'davidhalter/jedi-vim'
+Plugin 'tell-k/vim-autopep8'
 
 " jinja2
 Plugin 'Glench/Vim-Jinja2-Syntax'
