@@ -15,3 +15,8 @@ augroup vimrc_autocmds
 
 " https://github.com/tell-k/vim-autopep8
 let g:autopep8_max_line_length=119
+
+" remove trailing ws
+" https://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
+autocmd BufWritePre * :%s/\s\+$//e
+
