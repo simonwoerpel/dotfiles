@@ -8,12 +8,9 @@ augroup vimrc_autocmds
     autocmd FileType python set sw=4
     autocmd FileType python set ts=4
     autocmd FileType python set sts=4
-    autocmd FileType javascript set sw=2
-    autocmd FileType javascript set ts=2
-    autocmd FileType javascript set sts=2
-    autocmd FileType html set sw=2
-    autocmd FileType html set ts=2
-    autocmd FileType html set sts=2
+    autocmd FileType javascript,json,jsx,html set sw=2
+    autocmd FileType javascript,json,jsx,html set ts=2
+    autocmd FileType javascript,json,jsx,html set sts=2
     augroup END
 
 " https://github.com/tell-k/vim-autopep8

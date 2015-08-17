@@ -31,7 +31,8 @@ Plugin 'altercation/vim-colors-solarized'
 " Plugin 'chriskempson/base16-vim'
 
 " coding
-Plugin 'kchmck/vim-coffee-script'
+" Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 " Plugin 'godlygeek/tabular'
 " Plugin 'plasticboy/vim-markdown'
