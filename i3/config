@@ -205,5 +205,5 @@ mode "$mode_system" {
 bindsym $mod+Shift+x mode "$mode_system"
 
 # styling
-new_window none
+new_window 1pixel
 new_float 1pixel
