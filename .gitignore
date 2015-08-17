@@ -6,4 +6,5 @@
 !oh-my-zsh/custom/*
 !install.sh
 !xorg
+!i3
 
