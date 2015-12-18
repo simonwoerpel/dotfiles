@@ -2,10 +2,10 @@
 !.gitignore
 !vim/vimrc
 !vim/conf/*
-!zshrc
 !oh-my-zsh/custom/*
 !install.sh
-!xorg
-!i3
-!zsh
+!xorg/*
+!i3/*
+!zsh/*
+!conky/*
 
