@@ -1,0 +1,51 @@
+# GENERAL
+set editor="vim"
+set text_flowed=yes
+set tmpdir = ~/.mutt/tmp
+# Maildirs verwenden statt mbox-Dateien
+set mbox_type = Maildir
+# # Hauptverzeichnis der Mails
+set folder = ~/.mail
+# # für lokale Adressen oder Abkürzungen
+set alias_file = ~/.mutt/aliases
+# beim Suchen auch mit Umlauten usw klar kommen (dekodiert Header etc)
+set thorough_search
+set delete
+set wait_key=no
+set timeout=3
+# unset confirmappend
+set quit
+# Automatically quote message in reply
+set include=yes
+# Set quotemark to 1 byte
+set indent_str="> "
+
+set realname = 'Simon Wörpel'
+set net_inc=5
+source ~/.mutt/muttrc.mailboxes
+
+source ~/.mutt/mailboxes
+source ~/.mutt/config.d/display
+source ~/.mutt/config.d/behaviour
+source ~/.mutt/config.d/bindings
+source ~/.mutt/config.d/pgp
+source ~/.mutt/config.d/auto_view
+
+# colors
+source ~/.mutt/colors/mutt-colors-solarized-dark-16.muttrc
+#
+set sendmail="/usr/bin/msmtp"               #Pfad zu dem Programm, das die Mails verschicken soll
+set envelope_from=yes                       #übergibt msmtp automatisch den richtigen Absender
+
+unset allow_8bit                            #u.U. verbesserte Darstellung von Umlauten
+
+# LOCAL FOLDERS FOR CACHED HEADERS AND CERTIFICATES
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+
+# SECURING
+set move = no  #Stop asking to move read messages to mbox!
+
+#
+set sidebar_visible=no
