@@ -56,9 +56,14 @@
 *color7:                S_base2
 *color15:               S_base3
 
-! xterm
-!xterm*font: terminus-12
-*faceName: DejaVu\ Sans\ Mono\ for\ Powerline
+!!! fonts
+!
+!*faceName: DejaVu\ Sans\ Mono\ for\ Powerline
+*faceName: Meslo\ LG\ S\ DZ\ for\ Powerline
 *faceSize: 8
-xterm*loginShell: true
-xterm*saveLines: 5000
+
+!!! term
+!*loginShell: true
+*saveLines: 5000
+*scrollBar: false
+UXTerm*internalBorder: 0
