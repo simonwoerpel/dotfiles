@@ -1,4 +1,2 @@
 #!/bin/bash
-# i3lock -n -i ~/Bilder/i3lock/notd.png
-i3lock -n -c 000000
-
+i3lock -d -u -e -n -i ~/.wallpapers/solarized_1280.png
