@@ -1,0 +1,23 @@
+# vim: filetype=muttrc
+# öffnet direkt den Editor, Empfänger usw wird dann dort eingetragen
+# set autoedit
+set edit_headers
+set fast_reply
+# Betreff für Weiterleitungen
+set forward_format = "Fwd: %s"
+set forward_decode
+# Falls jemand Reply-To: setzt, das auch beachten
+set reply_to
+# Zitieren beim Antworten
+set include
+# Zitieren  beim Weiterleiten
+set forward_quote
+# Beim Senden folgende Zeichensätze versuchen
+set send_charset = 'us-ascii:iso-8859-15:utf-8' 
+# Dieses Mail-Format ist in manchen Mailprogrammen schöner
+set text_flowed = yes
+# Nicht mitschicken dass/welches mutt verwendet wird
+set user_agent = no 
+# um einzustellen, welche Programme zum Betrachten von Anhängen verwendet 
+# werden
+# set mailcap_path = /home/florian/.mutt/config.d/mailcap
