@@ -50,11 +50,12 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras common-aliases debian wd)
+plugins=(git git-extras common-aliases wd)
+# plugins=(git git-extras common-aliases wd vi-mode)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:~/.local/lib/python2.7/site-packages"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:$HOME/.local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -88,3 +89,5 @@ export NVM_DIR="/home/simonwoerpel/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 # nvm use stable
 
+# aliases
+source $HOME/.aliases
