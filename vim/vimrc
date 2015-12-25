@@ -21,7 +21,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
 " Plugin 'majutsushi/tagbar'
 " csv
-" Plugin 'chrisbra/csv.vim'
+Plugin 'chrisbra/csv.vim'
 " color
 Plugin 'altercation/vim-colors-solarized'
 
