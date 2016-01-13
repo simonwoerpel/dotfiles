@@ -14,5 +14,5 @@ conky -c ~/.conky/base &
 # conky -c ~/.conky/mail &
 conky -c ~/.conky/cal &
 feh --bg-fill ~/.wp.png
-mpd
+# mpd
 exec i3
