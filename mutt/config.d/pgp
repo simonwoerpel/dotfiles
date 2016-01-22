@@ -1,4 +1,7 @@
 # vim: filetype=muttrc
+# custom  header
+my_hdr OpenPGP: url=http://medienrevolte.de/pgp.txt
+
 # PGP
 # set pgp_default_version=gpg
 # set pgp_key_version=default
@@ -9,11 +12,19 @@
 # set pgp_gpg_pubring=~/.gnupg/pubring.gpg
 # set pgp_gpg_secring=~/.gnupg/secring.gpg
 
+# http://henrytodd.org/notes/2014/simpler-gnupg-mutt-config-with-gpgme/
+set crypt_use_gpgme=yes
+set crypt_replysign=yes
+set crypt_replyencrypt=yes
+set crypt_replysignencrypted=yes
+set crypt_autosign=yes
+set crypt_verify_sig=yes
+
 set pgp_autosign
 # if this variables is set, Mutt will ask to sign all the
 # # outbound messages. (1)
 #
-#set pgp_autoencrypt
+# set pgp_autoencrypt
 # # if this variable is set, Mutt will ask to encrypt all the
 # # outbound messages. (1)
 #
@@ -33,7 +44,7 @@ set pgp_verify_sig=yes
 # # Do you want to automatically verify incoming signed messages?
 # # Of course!
 #
-set pgp_timeout=60
+set pgp_timeout=600
 # # delete pass phrase from the memory cache <n> seconds
 # # after typing it. (2)
 #
@@ -58,10 +69,8 @@ set pgp_clearsign_command="gpg --no-verbose --batch --output - --passphrase-fd 0
 set pgp_import_command="gpg --no-verbose --import -v %f"
 set pgp_export_command="gpg --no-verbose --export --armor %r"
 set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
-set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys %r" 
-set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r" 
+set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys %r"
+set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r"
 set pgp_good_sign="^gpg: Good signature from"
-set crypt_replysign
-set crypt_replyencrypt=yes
-set crypt_verify_sig=yes
+
 
