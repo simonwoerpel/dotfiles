@@ -22,8 +22,9 @@ Plugin 'tpope/vim-sensible'
 " Plugin 'majutsushi/tagbar'
 " csv
 Plugin 'chrisbra/csv.vim'
-" color
+" appearance
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'Yggdroot/indentLine'
 
 " coding
 Plugin 'SirVer/ultisnips'
