@@ -26,6 +26,8 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 " coding
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 " Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
