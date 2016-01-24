@@ -9,10 +9,11 @@ xset b off
 # urxvtd -f
 # xsetroot -bg \#002b36 -mod 3 3
 # xsetroot -bg \#002b36
-conky -c ~/.conky/base &
+# conky -c ~/.conky/base &
 # conky -c ~/.conky/rss &
 # conky -c ~/.conky/mail &
-conky -c ~/.conky/cal &
+# conky -c ~/.conky/cal &
 feh --bg-fill ~/.wp.png
 # mpd
+compton -b
 exec i3
