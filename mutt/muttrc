@@ -32,7 +32,9 @@ source ~/.mutt/config.d/pgp
 source ~/.mutt/config.d/auto_view
 
 # colors
-source ~/.mutt/colors/mutt-colors-solarized-dark-16.muttrc
+# source ~/.mutt/colors/mutt-colors-solarized-dark-16.muttrc
+# source ~/.mutt/colors/gruvbox-256
+source ~/.mutt/colors/gruvbox-16
 #
 set sendmail="/usr/bin/msmtp"               #Pfad zu dem Programm, das die Mails verschicken soll
 set envelope_from=yes                       #übergibt msmtp automatisch den richtigen Absender
