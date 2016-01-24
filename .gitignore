@@ -14,3 +14,4 @@
 !config/privoxy/*
 !config/vimb/config
 !config/vimb/style.css
+!config/compton.conf
