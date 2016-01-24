@@ -10,4 +10,7 @@
 !conky/*
 !mutt/*
 !xcolors/*
-!config/*
+!config/dunst/*
+!config/privoxy/*
+!config/vimb/config
+!config/vimb/style.css

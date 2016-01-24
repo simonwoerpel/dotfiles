@@ -1,0 +1,72 @@
+set editor-command=xterm -e vim %s
+set spell-checking=true
+
+set minimumfontsize=10
+set monofontsize=10
+set fontsize=10
+
+set cursivfont=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+set defaultfont=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+set monofont=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+set sansfont=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+set seriffont=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+
+set hintkeys=asdfghjkl
+set home-page=http://www.zeit.de
+
+set completion-bg-active=#7c6f64
+set completion-fg-active=#ebdbb2
+set completion-bg-normal=#32302f
+set completion-fg-normal=#ebdbb2
+set completion-font=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+
+set input-bg-normal=#32302f
+set input-fg-normal=#ebdbb2
+set input-bg-error=#32302f
+set input-fg-error=#ebdbb2
+set input-font-normal=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+set input-font-error=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+
+set status-color-bg=#3c3836
+set status-color-fg=#076678
+set status-ssl-color-bg=#3c3836
+set status-ssl-color-fg=#076678
+set status-sslinvalid-color-bg=#3c3836
+set status-sslinvalid-color-fg=#076678
+set status-font=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+set status-ssl-font=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+set status-sslinvalid-font=Meslo\ LG\ L\ DZ\ for\ Powerline 10
+
+set accelerated-compositing=true
+set auto-resize-window=false
+set auto-shrink-images=true
+set caret=true
+
+# set x-hint-command=:sh! ~/local/bin/plumber <C-R>; <CR>
+# aug downloads
+#   autocmd LoadCommited * set download-use-external=false|set download-c
+
+set pagecache=true
+
+# privacy / privoxy
+set proxy=true
+
+set html5-database=false
+set html5-local-storage=false
+set images=true
+set insecure-content-show=false
+set insecure-content-run=false
+set java-applet=false
+set javascript-can-access-clipboard=false
+set javascript-can-open-windows-automatically=false
+set media-stream=false
+set mediasource=false
+set offlinecache=false
+set print-backgrounds=false
+set private-browsing=true
+set plugins=false
+set print-backgrounds=false
+set webinspector=false
+set xssauditor=false
+set cookie-accept=never
+set hsts=true
