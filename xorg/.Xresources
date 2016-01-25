@@ -1,6 +1,6 @@
 !!! colors
 #include ".xcolors/gruvbox"
-! #include ".xcolors/gruvbox"
+! #include ".xcolors/solarized"
 
 !
 !!! fonts
@@ -13,4 +13,4 @@
 !*loginShell: true
 *saveLines: 5000
 *scrollBar: false
-XTerm*termName: xterm-256color
+UXTerm*termName: xterm-256color

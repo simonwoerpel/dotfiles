@@ -1,14 +1,10 @@
 # vim: ft=sh
 
 export $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
-# export PYTHONPATH=~/.local/lib/python2.7/site-packages
-# xset +fp ~/.fonts
-# xset fp rehash
+export TERM=xterm-256color
+export http_proxy="http://localhost:8118"
 xrdb .Xresources
 xset b off
-# urxvtd -f
-# xsetroot -bg \#002b36 -mod 3 3
-# xsetroot -bg \#002b36
 # conky -c ~/.conky/base &
 # conky -c ~/.conky/rss &
 # conky -c ~/.conky/mail &
