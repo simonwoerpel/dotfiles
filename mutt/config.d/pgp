@@ -1,6 +1,6 @@
 # vim: filetype=muttrc
 # custom  header
-my_hdr OpenPGP: url=http://medienrevolte.de/pgp.txt
+my_hdr OpenPGP: url=http://medienrevolte.de/2EFFA5E4.asc
 
 # PGP
 # set pgp_default_version=gpg
