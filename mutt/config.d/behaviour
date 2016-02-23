@@ -13,11 +13,11 @@ set include
 # Zitieren  beim Weiterleiten
 set forward_quote
 # Beim Senden folgende Zeichensätze versuchen
-set send_charset = 'us-ascii:iso-8859-15:utf-8' 
+set send_charset = 'us-ascii:iso-8859-15:utf-8'
 # Dieses Mail-Format ist in manchen Mailprogrammen schöner
 set text_flowed = yes
 # Nicht mitschicken dass/welches mutt verwendet wird
-set user_agent = no 
-# um einzustellen, welche Programme zum Betrachten von Anhängen verwendet 
+set user_agent = no
+# um einzustellen, welche Programme zum Betrachten von Anhängen verwendet
 # werden
-# set mailcap_path = /home/florian/.mutt/config.d/mailcap
+set mailcap_path = ~/.mutt/config.d/mailcap
