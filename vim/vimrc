@@ -19,6 +19,7 @@ Plugin 'ervandew/supertab'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
+Plugin 'airblade/vim-gitgutter'
 " Plugin 'majutsushi/tagbar'
 " csv
 Plugin 'chrisbra/csv.vim'
@@ -30,8 +31,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'itchyny/lightline.vim'
 
 " coding
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+" Plugin 'SirVer/ultisnips'
+" Plugin 'honza/vim-snippets'
 " Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
@@ -79,8 +80,8 @@ set autoread
 " allow the cursor to pass the last character
 set virtualedit=onemore
 
-" show line numbers
-set number
+" don't show line numbers (toggle via nmap)
+set nonumber
 
 " Case insensitive search
 set ignorecase
@@ -109,6 +110,8 @@ set showmatch
 
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
+
+" set updatetime=500
 
 " set spell
 
