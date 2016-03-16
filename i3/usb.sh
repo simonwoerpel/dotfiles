@@ -12,11 +12,11 @@ elif findmnt /dev/sdb > /dev/null; then
 else
     if mount /dev/sdb1; then
         notify-send 'MOUNT: usb' -t 500
-        vifm ~/.usb1;
+        xterm -e vifm ~/.usb1;
         # xterm; cd ~/.usb1
     elif mount /dev/sdb; then
         notify-send 'MOUNT: usb' -t 500
-        vifm ~/.usb1;
+        xterm -e vifm ~/.usb1;
     else
         notify-send -u critical 'MOUNT: usb failed' -t 500
     fi
