@@ -1,0 +1,28 @@
+" vim:ft=vim
+
+" Limelight
+" https://github.com/junegunn/limelight.vim
+let g:limelight_conceal_ctermfg = 'gray'
+
+function! s:goyo_enter()
+    silent !tmux set status off
+    set noshowmode
+    set noshowcmd
+    " set scrolloff=999
+    Limelight
+    set nocursorline
+    IndentLinesDisable
+endfunction
+
+function! s:goyo_leave()
+    silent !tmux set status on
+    set showmode
+    set showcmd
+    " set scrolloff=5
+    Limelight!
+    set cursorline
+    IndentLinesEnable
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()

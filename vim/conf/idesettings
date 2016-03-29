@@ -46,3 +46,6 @@ nmap <localleader>g :GitGutterToggle<CR>
 
 " linenumbers
 nmap <localleader>n :set number!<CR>
+
+" enter goyo mode
+nmap <F11> :Goyo<CR>

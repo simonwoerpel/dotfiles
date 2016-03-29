@@ -20,13 +20,15 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
 Plugin 'airblade/vim-gitgutter'
-" Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 " csv
 Plugin 'chrisbra/csv.vim'
 " appearance
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
 Plugin 'Yggdroot/indentLine'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 " Plugin 'vim-airline/vim-airline'
 Plugin 'itchyny/lightline.vim'
 
@@ -47,7 +49,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
 
 " R
-Plugin 'vim-scripts/Vim-R-plugin'
+" Plugin 'jalvesaq/Nvim-R'
+" Plugin 'vim-scripts/Vim-R-plugin'
 " Plugin 'ervandew/screen'
 
 " python
@@ -149,3 +152,4 @@ source ~/.vim/conf/autocomplete
 source ~/.vim/conf/syntastic
 source ~/.vim/conf/keybindings
 source ~/.vim/conf/idesettings
+source ~/.vim/conf/appearance
