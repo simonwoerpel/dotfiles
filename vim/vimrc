@@ -51,8 +51,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
 
 " R
-" Plugin 'jalvesaq/Nvim-R'
-" Plugin 'vim-scripts/Vim-R-plugin'
+Plugin 'jalvesaq/Nvim-R'
 " Plugin 'ervandew/screen'
 
 " python
