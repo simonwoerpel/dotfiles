@@ -30,7 +30,6 @@ source ~/.mutt/config.d/behaviour
 source ~/.mutt/config.d/bindings
 source ~/.mutt/config.d/pgp
 source ~/.mutt/config.d/auto_view
-
 source ~/.mutt/aliases
 
 # colors
@@ -44,12 +43,11 @@ set envelope_from=yes                       #übergibt msmtp automatisch den ric
 unset allow_8bit                            #u.U. verbesserte Darstellung von Umlauten
 
 # LOCAL FOLDERS FOR CACHED HEADERS AND CERTIFICATES
-set header_cache =~/.mutt/cache/headers
-set message_cachedir =~/.mutt/cache/bodies
+set header_cache =~/.mutt/cache/headers/
+set message_cachedir =~/.mutt/cache/bodies/
 set certificate_file =~/.mutt/certificates
 
 # SECURING
 set move = no  #Stop asking to move read messages to mbox!
 
 #
-set sidebar_visible=no
