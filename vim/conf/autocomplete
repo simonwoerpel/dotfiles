@@ -1,3 +1,4 @@
+" vim: ft=vim
 " https://robots.thoughtbot.com/vim-you-complete-me
 
 imap <Tab> <C-P>
