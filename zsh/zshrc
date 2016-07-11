@@ -55,7 +55,7 @@ plugins=(git git-extras common-aliases wd)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:$HOME/.local/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:$HOME/.local/bin:$HOME/.src/bin"
 export PATH="$HOME/.src/rbenv/bin:$PATH"
 export PATH="$HOME/.src/rbenv/plugins/ruby-build/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
