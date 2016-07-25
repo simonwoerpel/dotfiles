@@ -102,7 +102,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # naming workspaces
-set $ws1 "1wee"
+set $ws1 "1msg"
 set $ws2 "2www"
 set $ws3 "3mutt"
 set $ws4 "4vim"
