@@ -184,15 +184,15 @@ bar {
     status_command i3blocks
     # status_command ~/.i3/i3status.sh
         mode hide
-  colors {
-    separator #cb4b16
-    background #073642
-    statusline #268bd2
-    focused_workspace #859900 #859900 #fdf6e3
-    active_workspace #6c71c4 #6c71c4 #fdf6e3
-    inactive_workspace #93a1a1 #93a1a1 #002b36
-    urgent_workspace #d33682 #d33682 #fdf6e3
-  }
+        colors {
+            separator #282828
+                background #928374
+                statusline #282828
+                focused_workspace #282828 #282828 #ebdbb2
+                active_workspace #1d2021 #1d2021 #928374
+                inactive_workspace #282828 #928374 #28282
+                urgent_workspace #cc241d #cc241d #ebdbb2
+        }
 }
 
 
