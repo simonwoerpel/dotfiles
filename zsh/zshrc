@@ -97,3 +97,6 @@ eval "$(rbenv init -)"
 
 # aliases
 source $HOME/.aliases
+
+# gruvbox colors
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
