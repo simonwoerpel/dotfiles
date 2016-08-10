@@ -271,15 +271,10 @@ exec --no-startup-id i3-msg 'workspace 3mutt; exec uxterm -e mutt'
 
 
 # ncmpcpp
-bindsym $mod+Left exec "ncmpcpp prev; ncmpcpp --now-playing | xargs -0 notify-send -t 10"
-bindsym $mod+Down exec ncmpcpp toggle
-bindsym $mod+Up exec "ncmpcpp stop; notify-send 'mpd stop' -t 10"
-bindsym $mod+Right exec "ncmpcpp next; ncmpcpp --now-playing | xargs -0 notify-send -t 10"
-
-client.focused #859900 #859900 #fdf6e3 #859900
-client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
-client.unfocused #073642 #073642 #93a1a1 #586e75
-client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+# bindsym $mod+Left exec "ncmpcpp prev; ncmpcpp --now-playing | xargs -0 notify-send -t 10"
+# bindsym $mod+Down exec ncmpcpp toggle
+# bindsym $mod+Up exec "ncmpcpp stop; notify-send 'mpd stop' -t 10"
+# bindsym $mod+Right exec "ncmpcpp next; ncmpcpp --now-playing | xargs -0 notify-send -t 10"
 
 # gaps
 gaps inner 5
