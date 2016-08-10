@@ -230,13 +230,13 @@ bindsym $mod+u exec ~/.i3/usb.sh
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (d) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id sh ~/.i3/i3lock.sh, mode "default"
-    bindsym e exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#859900" -sb "#cb4b16"  -nf "#002b36" -i -p "Really exit i3 X session?") = "YES" ] && i3-msg exit', mode "default"
+    bindsym e exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Logout?") = "YES" ] && i3-msg exit', mode "default"
     # bindsym e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. All unsaved data will be lost.' -b 'Yes, exit i3' 'i3-msg exit'", mode "default"
     bindsym s exec --no-startup-id sh ~/.i3/i3lock.sh, mode default; exec --no-startup-id /bin/systemctl suspend, mode "default"
     bindsym h exec --no-startup-id sh ~/.i3/i3lock.sh, mode default; exec --no-startup-id /bin/systemctl hibernate, mode "default"
-    bindsym r exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#859900" -sb "#cb4b16"  -nf "#002b36" -i -p "Really reboot?") = "YES" ] && /bin/systemctl reboot', mode "default"
+    bindsym r exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Reboot?") = "YES" ] && /bin/systemctl reboot', mode "default"
     # bindsym r exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the reboot shortcut. All unsaved data will be lost.' -b 'Yes, reboot' '/bin/systemctl reboot'", mode "default"
-    bindsym d exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#859900" -sb "#cb4b16"  -nf "#002b36" -i -p "Really power off?") = "YES" ] && /bin/systemctl poweroff', mode "default"
+    bindsym d exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Shutdown?") = "YES" ] && /bin/systemctl poweroff', mode "default"
     # bindsym d exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the shutdown shortcut. All unsaved data will be lost.' -b 'Yes, shutdown' '/bin/systemctl poweroff'", mode "default"
 
     # back to normal: Enter or Escape
@@ -286,3 +286,47 @@ gaps inner 5
 gaps outer 3
 smart_gaps on
 smart_borders no_gaps
+
+
+# gaps modes
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+    bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+    bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+    bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+client.focused #689d6a #689d6a #282828 #282828
+client.focused_inactive #1d2021 #1d2021 #928374 #282828
+client.unfocused #32302f #32302f #928374 #282828
+client.urgent #cc241d #cc241d #ebdbb2 #282828
