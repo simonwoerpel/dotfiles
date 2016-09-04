@@ -39,10 +39,12 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run -fn 'Meslo LG S DZ for Powerline:size=8' -nb '#859900' -sb '#cb4b16'  -nf '#002b36'
-bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -opacity "50" -bw 0 -bc "#040405" -bg "#040405" -fg "#c5c8c6" -hlbg "#040405" -hlfg "#ffffff" -font 'Meslo LG S DZ for Powerline:size 14'
+# bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -opacity "50" -bw 0 -bc "#040405" -bg "#040405" -fg "#c5c8c6" -hlbg "#040405" -hlfg "#ffffff" -font 'Meslo LG S DZ for Powerline:size 14'
+# bindsym $mod+d exec ~/.i3/rofi.sh
+bindsym $mod+d exec rofi -show run -lines 8 -bw 0 -font "Meslo LG S DZ for Powerline:size 10" -opacity 85
 
 # switch between windows
-bindsym $mod+Tab exec rofi -show window -lines 5 -eh 2 -opacity "50" -bw 0 -bc "#040405" -bg "#040405" -fg "#c5c8c6" -hlbg "#040405" -hlfg "#ffffff" -font 'Meslo LG S DZ for Powerline:size 14'
+bindsym $mod+Tab exec rofi -show window -lines 8 -bw 0 -font "Meslo LG S DZ for Powerline:size 10" -opacity 85
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -102,7 +104,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # naming workspaces
-set $ws1 "1wee"
+set $ws1 "1msg"
 set $ws2 "2www"
 set $ws3 "3mutt"
 set $ws4 "4vim"
@@ -146,7 +148,7 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 #
 # https://faq.i3wm.org/question/1262/exiting-i3-without-mouse-click/
-bindsym $mod+Shift+e exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#859900" -sb "#cb4b16"  -nf "#002b36" -i -p "Really exit i3 X session?") = "YES" ] && i3-msg exit'
+# bindsym $mod+Shift+e exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#859900" -sb "#cb4b16"  -nf "#002b36" -i -p "Really exit i3 X session?") = "YES" ] && i3-msg exit'
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -177,19 +179,20 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  # status_command i3status
-        status_command ~/.local/bin/py3status -c ~/.i3/i3status.conf -n 10
-        # status_command ~/.i3/i3status.sh
+    # status_command i3status
+    # status_command ~/.local/bin/py3status -c ~/.i3/i3status.conf -n 10
+    status_command i3blocks
+    # status_command ~/.i3/i3status.sh
         mode hide
-  colors {
-    separator #cb4b16
-    background #073642
-    statusline #268bd2
-    focused_workspace #859900 #859900 #fdf6e3
-    active_workspace #6c71c4 #6c71c4 #fdf6e3
-    inactive_workspace #93a1a1 #93a1a1 #002b36
-    urgent_workspace #d33682 #d33682 #fdf6e3
-  }
+        colors {
+            separator #282828
+                background #928374
+                statusline #282828
+                focused_workspace #282828 #282828 #ebdbb2
+                active_workspace #1d2021 #1d2021 #928374
+                inactive_workspace #282828 #928374 #28282
+                urgent_workspace #cc241d #cc241d #ebdbb2
+        }
 }
 
 
@@ -227,13 +230,13 @@ bindsym $mod+u exec ~/.i3/usb.sh
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (d) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id sh ~/.i3/i3lock.sh, mode "default"
-    bindsym e exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#859900" -sb "#cb4b16"  -nf "#002b36" -i -p "Really exit i3 X session?") = "YES" ] && i3-msg exit', mode "default"
+    bindsym e exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Logout?") = "YES" ] && i3-msg exit', mode "default"
     # bindsym e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. All unsaved data will be lost.' -b 'Yes, exit i3' 'i3-msg exit'", mode "default"
     bindsym s exec --no-startup-id sh ~/.i3/i3lock.sh, mode default; exec --no-startup-id /bin/systemctl suspend, mode "default"
     bindsym h exec --no-startup-id sh ~/.i3/i3lock.sh, mode default; exec --no-startup-id /bin/systemctl hibernate, mode "default"
-    bindsym r exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#859900" -sb "#cb4b16"  -nf "#002b36" -i -p "Really reboot?") = "YES" ] && /bin/systemctl reboot', mode "default"
+    bindsym r exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Reboot?") = "YES" ] && /bin/systemctl reboot', mode "default"
     # bindsym r exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the reboot shortcut. All unsaved data will be lost.' -b 'Yes, reboot' '/bin/systemctl reboot'", mode "default"
-    bindsym d exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#859900" -sb "#cb4b16"  -nf "#002b36" -i -p "Really power off?") = "YES" ] && /bin/systemctl poweroff', mode "default"
+    bindsym d exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Shutdown?") = "YES" ] && /bin/systemctl poweroff', mode "default"
     # bindsym d exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the shutdown shortcut. All unsaved data will be lost.' -b 'Yes, shutdown' '/bin/systemctl poweroff'", mode "default"
 
     # back to normal: Enter or Escape
@@ -246,7 +249,7 @@ bindsym $mod+Shift+x mode "$mode_system"
 # xrandr mode
 set $mode_xrandr Xrandr (b) büro, (s) solo, (h) home
 mode "$mode_xrandr" {
-    bindsym b exec --no-startup-id xrandr --output VGA1 --mode 1920x1080 --left-of LVDS1 --output LVDS1 --mode 1280x800 --rate 60.18, mode "default"
+    bindsym b exec --no-startup-id xrandr --output VGA1 --mode 1920x1080 --right-of LVDS1 --output LVDS1 --mode 1280x800 --rate 60.18, mode "default"
     bindsym s exec --no-startup-id xrandr --output VGA1 --off --output LVDS1 --mode 1280x800 --rate 60.18, mode "default"
     bindsym h exec --no-startup-id xrandr --output DVI-I-2 --mode 1920x1080 --rate 60.00 --output DVI-I-1 --mode 1920x1080 --rate 60.00 --right-of DVI-I-2, mode "default"
     bindsym Return mode "default"
@@ -268,18 +271,57 @@ exec --no-startup-id i3-msg 'workspace 3mutt; exec uxterm -e mutt'
 
 
 # ncmpcpp
-bindsym $mod+Left exec "ncmpcpp prev; ncmpcpp --now-playing | xargs -0 notify-send -t 10"
-bindsym $mod+Down exec ncmpcpp toggle
-bindsym $mod+Up exec "ncmpcpp stop; notify-send 'mpd stop' -t 10"
-bindsym $mod+Right exec "ncmpcpp next; ncmpcpp --now-playing | xargs -0 notify-send -t 10"
-
-client.focused #859900 #859900 #fdf6e3 #859900
-client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
-client.unfocused #073642 #073642 #93a1a1 #586e75
-client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+# bindsym $mod+Left exec "ncmpcpp prev; ncmpcpp --now-playing | xargs -0 notify-send -t 10"
+# bindsym $mod+Down exec ncmpcpp toggle
+# bindsym $mod+Up exec "ncmpcpp stop; notify-send 'mpd stop' -t 10"
+# bindsym $mod+Right exec "ncmpcpp next; ncmpcpp --now-playing | xargs -0 notify-send -t 10"
 
 # gaps
-gaps inner 8
-gaps outer 6
+gaps inner 5
+gaps outer 3
 smart_gaps on
 smart_borders no_gaps
+
+
+# gaps modes
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+    bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+    bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+    bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+client.focused #689d6a #689d6a #282828 #282828
+client.focused_inactive #1d2021 #1d2021 #928374 #282828
+client.unfocused #32302f #32302f #928374 #282828
+client.urgent #cc241d #cc241d #ebdbb2 #282828

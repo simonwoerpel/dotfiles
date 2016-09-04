@@ -23,6 +23,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-repeat'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'sheerun/vim-polyglot'
 
 " csv
 Plugin 'chrisbra/csv.vim'
@@ -151,8 +152,8 @@ let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ }
 set background=dark
-set t_Co=256
-let g:solarized_termcolors=256
+" set t_Co=256
+" let g:solarized_termcolors=256
 colorscheme gruvbox
 
 " " powerline
