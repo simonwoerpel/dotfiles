@@ -14,16 +14,16 @@ unhdr_order *
 hdr_order from: to: cc: date: subject:
 
 # Deutsches Datumsformat
-set date_format = "%d.%m.%y"
+set date_format = "%I:%M:%S %d.%m"
 set locale=de_DE.UTF-8
 # wie eine Mail in der Übersicht aussehen soll, siehe man muttrc
-# set index_format = "[%Z]  %D  %-20.20F  %s"
+set index_format = "%-3.3C [%Z]  %D  %-20.20F %-20.20a  %s"
 # Konversationen zusammenfügen
 # set sort = threads
 # neueste Mail oben
 set sort = reverse-last-date-received
 # Etwas Kontext für die angezeigte Mail
-set pager_index_lines = 10
+set pager_index_lines = 0
 # Etwas Kontext für die angezeigte Seite der Mail-Übersicht
 set pager_context = 3
 # nicht automatisch zur nächsten Mail weiterscrollen
