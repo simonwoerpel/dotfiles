@@ -6,8 +6,7 @@
 !!! fonts
 !
 !*faceName: DejaVu\ Sans\ Mono\ for\ Powerline
-*faceName: Meslo\ LG\ L\ DZ\ for\ Powerline
-*faceSize: 10
+#include ".Xres_fonts_local"
 
 !!! term
 !*loginShell: true
