@@ -198,6 +198,8 @@ bar {
 
 # no borders
 hide_edge_borders both
+
+# floating
 for_window [class="^lxrandr$"] floating enable; border pixel 0
 
 # application workspaces

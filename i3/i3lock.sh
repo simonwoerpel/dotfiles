@@ -1,2 +1,2 @@
 #!/bin/bash
-i3lock -d -u -e -n -i ~/.wallpapers/solarized_1280.png
+i3lock -d -u -e -n -t -i ~/.i3lock.png

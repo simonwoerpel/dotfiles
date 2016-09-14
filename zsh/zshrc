@@ -55,12 +55,13 @@ plugins=(git git-extras common-aliases wd)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:$HOME/.local/bin:$HOME/.src/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 export PATH="$HOME/.src/rbenv/bin:$PATH"
 export PATH="$HOME/.src/rbenv/plugins/ruby-build/bin:$PATH"
 # export LADSPA_PATH="/usr/lib/ladspa:/usr/local/lib/ladspa:$HOME/.ladspa"
 export LXVST_PATH="/usr/lib/lxvst:/usr/local/lib/lxvst:$HOME/.lxvst"
 export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/custom/virtualenv-auto-activate.sh

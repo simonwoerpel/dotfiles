@@ -27,15 +27,19 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 " jsx riot.js "
 au BufNewFile,BufRead *.tag setlocal ft=javascript
 
+" jinja ft
+au BufNewFile,BufRead *.html setlocal ft=html.jinja.jinja2 syn=jinja2
+
 " R terminal
 let R_term = "uxterm"
 
 " UltiSnips
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
-" let g:UltiSnipsExpandTrigger="<c-tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>""
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" let g:UltiSnipsListSnippets="<c-l>"
 
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
@@ -74,9 +78,9 @@ function! s:config_easyfuzzymotion(...) abort
     \ }), get(a:, 1, {}))
 endfunction
 
-noremap <silent><expr> / incsearch#go(<SID>incsearch_config())
+noremap <silent><expr> <localleader>/ incsearch#go(<SID>incsearch_config())
 noremap <silent><expr> <localleader>s incsearch#go(<SID>config_easyfuzzymotion())
-noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
+noremap <silent><expr> <localleader>?  incsearch#go(<SID>incsearch_config({'command': '?'}))
 noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
 " map /  <Plug>(incsearch-easymotion-/)
 " map ?  <Plug>(incsearch-easymotion-?)
@@ -111,3 +115,6 @@ nmap <leader>d :TernDef<CR>
 nmap <leader>r :TernRename<CR>
 nmap <leader>n :TernRefs<CR>
 nmap K :TernDoc<CR>
+
+" ycm
+" let g:ycm_min_num_of_chars_for_completion = 1

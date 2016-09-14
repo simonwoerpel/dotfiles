@@ -20,7 +20,7 @@ set text_flowed = yes
 set user_agent = no
 # um einzustellen, welche Programme zum Betrachten von Anhängen verwendet
 # werden
-set mailcap_path = ~/.mutt/config.d/mailcap
+# set mailcap_path = ~/.mutt/config.d/mailcap
 
 # http://durak.org/sean/pubs/software/mutt-1.5.21/tuning.html
 set read_inc=1000
