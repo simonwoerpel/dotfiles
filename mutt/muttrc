@@ -51,3 +51,4 @@ set certificate_file =~/.mutt/certificates
 set move = no  #Stop asking to move read messages to mbox!
 
 #
+set sidebar_visible=no
