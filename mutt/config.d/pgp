@@ -2,17 +2,7 @@
 # custom  header
 my_hdr OpenPGP: url=http://medienrevolte.de/2EFFA5E4.asc
 
-# PGP
-# set pgp_default_version=gpg
-# set pgp_key_version=default
-# set pgp_receive_version=default
-# set pgp_send_version=default
-# set pgp_sign_micalg=pgp-sha1
-# set pgp_gpg=/usr/bin/gpg
-# set pgp_gpg_pubring=~/.gnupg/pubring.gpg
-# set pgp_gpg_secring=~/.gnupg/secring.gpg
-
-# http://henrytodd.org/notes/2014/simpler-gnupg-mutt-config-with-gpgme/
+set pgp_use_gpg_agent=no
 set crypt_use_gpgme=no
 set crypt_replysign=yes
 set crypt_replyencrypt=yes
@@ -59,18 +49,3 @@ set pgp_sign_as="2EFFA5E4"
 # set pgp_sign_micalg=<some>
 # # message integrity check algorithm, where
 # # <some> is something from the next: (3)
-
-# http://blog.florianheinle.de/post/47723652902/mutt-offlineimap-notmuch-goobook
-# set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
-# set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
-# set pgp_decrypt_command="gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
-# set pgp_sign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u   %a? %f"
-# set pgp_clearsign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?  -u %a? %f"
-# set pgp_import_command="gpg --no-verbose --import -v %f"
-# set pgp_export_command="gpg --no-verbose --export --armor %r"
-# set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
-# set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys %r"
-# set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r"
-# set pgp_good_sign="^gpg: Good signature from"
-
-
