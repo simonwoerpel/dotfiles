@@ -89,6 +89,9 @@ Plugin 'Glench/Vim-Jinja2-Syntax'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" included vim packages
+packadd! matchit
+
 set hidden
 
 " enable syntax highlighting
