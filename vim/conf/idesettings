@@ -118,3 +118,8 @@ nmap K :TernDoc<CR>
 
 " ycm
 " let g:ycm_min_num_of_chars_for_completion = 1
+
+" vim-markdown
+" disable conceal for urls
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_frontmatter = 1
