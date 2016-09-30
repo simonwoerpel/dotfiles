@@ -95,7 +95,7 @@ export NVM_DIR="$HOME/.nvm"
 # nvm use stable
 
 # rbenv
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
 
 # aliases
