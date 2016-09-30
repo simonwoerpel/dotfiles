@@ -1,5 +1,5 @@
 [global]
-    font = Meslo LG S DZ for Powerline 8
+    font = Meslo LG S DZ for Powerline 7
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -117,10 +117,10 @@
     separator_height = 2
 
     # Padding between text and separator.
-    padding = 8
+    padding = 4
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 4
 
     # Define a color for the separator.
     # possible values are:
@@ -175,19 +175,19 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#268bd2"
-    foreground = "#839496"
+    background = "#928374"
+    foreground = "#282828"
     timeout = 10
 
 [urgency_normal]
-    background = "#073642"
-    foreground = "#839496"
+    background = "#928374"
+    foreground = "#282828"
     timeout = 10
 
 [urgency_critical]
-    foreground = "#eee8d5"
-    background = "#dc322f"
-    timeout = 0
+    foreground = "#ebdbb2"
+    background = "#cc241d"
+    timeout = 10
 
 
 # Every section that isn't one of the above is interpreted as a rules to
