@@ -9,6 +9,6 @@ xset b off
 # conky -c ~/.conky/rss &
 # conky -c ~/.conky/mail &
 # conky -c ~/.conky/cal &
-feh --bg-fill ~/.wp.png
+sh ~/.fehbg &
 compton -b
 exec i3
