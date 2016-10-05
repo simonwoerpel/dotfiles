@@ -12,7 +12,7 @@ set sansfont=Meslo\ LG\ L\ DZ\ for\ Powerline 10
 set seriffont=Meslo\ LG\ L\ DZ\ for\ Powerline 10
 
 set hintkeys=asdfghjkl
-set home-page=http://www.zeit.de
+set home-page=file:///home/simonwoerpel/index.html
 
 set completion-bg-active=#7c6f64
 set completion-fg-active=#ebdbb2

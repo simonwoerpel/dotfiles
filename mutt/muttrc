@@ -1,6 +1,5 @@
 # GENERAL
 set editor="vim"
-set text_flowed=yes
 set tmpdir = ~/.mutt/tmp
 # Maildirs verwenden statt mbox-Dateien
 set mbox_type = Maildir

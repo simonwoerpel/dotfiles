@@ -25,3 +25,8 @@ set mailcap_path = ~/.mutt/config.d/mailcap
 # http://durak.org/sean/pubs/software/mutt-1.5.21/tuning.html
 set read_inc=1000
 set write_inc=1000
+
+# add sender to aliases if not already present:
+# http://www.mutt.org/doc/manual/#display-filter
+# http://wcm1.web.rice.edu/mutt-tips.html
+set display_filter = ~/.mutt/scripts/get_alias.sh
