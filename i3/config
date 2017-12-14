@@ -18,7 +18,7 @@ set $mod Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 # font pango:DejaVu Sans Mono 8
-font pango:Meslo LG S DZ for Powerline 7
+font pango:Inconsolata 14
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -32,6 +32,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec xterm
 # bindsym $mod+Return exec urxvtc
 
 # kill focused window
@@ -41,10 +42,10 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec dmenu_run -fn 'Meslo LG S DZ for Powerline:size=8' -nb '#859900' -sb '#cb4b16'  -nf '#002b36'
 # bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -opacity "50" -bw 0 -bc "#040405" -bg "#040405" -fg "#c5c8c6" -hlbg "#040405" -hlfg "#ffffff" -font 'Meslo LG S DZ for Powerline:size 14'
 # bindsym $mod+d exec ~/.i3/rofi.sh
-bindsym $mod+d exec rofi -show run -lines 8 -bw 0 -font "Meslo LG S DZ for Powerline:size 10" -opacity 85
+bindsym $mod+d exec rofi -show run -lines 8 -bw 0 -font "Inconsolata:size 18" -opacity 85
 
 # switch between windows
-bindsym $mod+Tab exec rofi -show window -lines 8 -bw 0 -font "Meslo LG S DZ for Powerline:size 10" -opacity 85
+bindsym $mod+Tab exec rofi -show window -lines 8 -bw 0 -font "Inconsolata:size 18" -opacity 85
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -214,7 +215,7 @@ bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Bilder/screen
 # application shortcuts
 bindsym $mod+y exec uxterm -e ~/.local/bin/vifm
 bindsym $mod+c exec chromium
-bindsym $mod+m exec uxterm -e mutt
+bindsym $mod+m exec i3-sensible-terminal -e mutt
 
 bindsym $mod+t exec i3-input -F 'mark %s' -l 1 -P 'tag: '
 bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'go to: '
@@ -232,13 +233,13 @@ bindsym $mod+u exec ~/.i3/usb.sh
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (d) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id sh ~/.i3/i3lock.sh, mode "default"
-    bindsym e exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Logout?") = "YES" ] && i3-msg exit', mode "default"
+    bindsym e exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Inconsolata:size=18" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Logout?") = "YES" ] && i3-msg exit', mode "default"
     # bindsym e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. All unsaved data will be lost.' -b 'Yes, exit i3' 'i3-msg exit'", mode "default"
     bindsym s exec --no-startup-id sh ~/.i3/i3lock.sh, mode default; exec --no-startup-id /bin/systemctl suspend, mode "default"
     bindsym h exec --no-startup-id sh ~/.i3/i3lock.sh, mode default; exec --no-startup-id /bin/systemctl hibernate, mode "default"
-    bindsym r exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Reboot?") = "YES" ] && /bin/systemctl reboot', mode "default"
+    bindsym r exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Inconsolata:size=18" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Reboot?") = "YES" ] && /bin/systemctl reboot', mode "default"
     # bindsym r exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the reboot shortcut. All unsaved data will be lost.' -b 'Yes, reboot' '/bin/systemctl reboot'", mode "default"
-    bindsym d exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Meslo LG S DZ for Powerline:size=8" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Shutdown?") = "YES" ] && /bin/systemctl poweroff', mode "default"
+    bindsym d exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Inconsolata:size=18" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Shutdown?") = "YES" ] && /bin/systemctl poweroff', mode "default"
     # bindsym d exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the shutdown shortcut. All unsaved data will be lost.' -b 'Yes, shutdown' '/bin/systemctl poweroff'", mode "default"
 
     # back to normal: Enter or Escape
@@ -279,8 +280,8 @@ new_float none
 # bindsym $mod+Right exec "ncmpcpp next; ncmpcpp --now-playing | xargs -0 notify-send -t 10"
 
 # gaps
-gaps inner 5
-gaps outer 3
+gaps inner 6
+gaps outer 4
 smart_gaps on
 smart_borders no_gaps
 
@@ -327,3 +328,8 @@ client.focused #689d6a #689d6a #282828 #282828
 client.focused_inactive #1d2021 #1d2021 #928374 #282828
 client.unfocused #32302f #32302f #928374 #282828
 client.urgent #cc241d #cc241d #ebdbb2 #282828
+
+
+# gnome integration
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec_always --no-startup-id gnome-power-manager
