@@ -103,3 +103,4 @@ source $HOME/.aliases
 
 # gruvbox colors
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
