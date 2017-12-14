@@ -269,7 +269,7 @@ new_float none
 # autostart setup
 # exec --no-startup-id ~.i3/startup.sh
 
-exec --no-startup-id i3-msg 'workspace 3mutt; exec uxterm -e mutt'
+# exec --no-startup-id i3-msg 'workspace 3mutt; exec uxterm -e mutt'
 
 
 # ncmpcpp
