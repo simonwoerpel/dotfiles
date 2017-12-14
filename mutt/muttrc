@@ -1,4 +1,5 @@
 # GENERAL
+set copy=yes  # need for gpg encrypt myself
 set editor="vim"
 set tmpdir = ~/.mutt/tmp
 # Maildirs verwenden statt mbox-Dateien
