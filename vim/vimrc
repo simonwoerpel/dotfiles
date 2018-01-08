@@ -32,7 +32,8 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'chrisbra/csv.vim'
 " appearance
 " Plugin 'altercation/vim-colors-solarized'
-Plugin 'morhetz/gruvbox'
+" Plugin 'morhetz/gruvbox'
+Plugin 'arcticicestudio/nord-vim'
 " Plugin 'Yggdroot/indentLine'
 " Plugin 'junegunn/goyo.vim'
 " Plugin 'junegunn/limelight.vim'
@@ -155,13 +156,14 @@ set splitbelow
 set splitright
 
 " color
-let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'seoul256',
+"       \ }
 set background=dark
 " set t_Co=256
 " let g:solarized_termcolors=256
-colorscheme gruvbox
+let g:nord_italic_comments = 1
+colorscheme nord
 
 " " powerline
 " python from powerline.vim import setup as powerline_setup
