@@ -103,4 +103,9 @@ source $HOME/.aliases
 
 # gruvbox colors
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# make keyring available
+export $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
