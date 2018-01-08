@@ -338,5 +338,18 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 
 # gnome integration
+# exec --no-startup-id gnome-session --session=gnome-i3 --disable-acceleration-check
+exec --no-startup-id feh --bg-fill ~/.wp.png
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id gnome-power-manager
+exec --no-startup-id compton -b
+exec --no-startup-id dbus-send \
+    --session \
+    --print-reply=literal \
+    --dest=org.gnome.SessionManager \
+    "/org/gnome/SessionManager" \
+    org.gnome.SessionManager.RegisterClient \
+    "string:i3" \
+    "string:$DESKTOP_AUTOSTART_ID"
+
+exec i3-msg restart
