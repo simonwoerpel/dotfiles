@@ -40,9 +40,10 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run -fn 'Meslo LG S DZ for Powerline:size=8' -nb '#859900' -sb '#cb4b16'  -nf '#002b36'
-# bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -opacity "50" -bw 0 -bc "#040405" -bg "#040405" -fg "#c5c8c6" -hlbg "#040405" -hlfg "#ffffff" -font 'Meslo LG S DZ for Powerline:size 14'
+# bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -opacity "50" -bw 0 -bc "#040405" -bg "#040405" -fg "#c5c8c6" -hlbg "#040405" -hlfg "#ffffff" -font 'Inconsolata:size 18'
 # bindsym $mod+d exec ~/.i3/rofi.sh
-bindsym $mod+d exec rofi -show run -lines 8 -bw 0 -font "Inconsolata:size 18" -opacity 85
+# bindsym $mod+d exec rofi -show run -lines 8 -bw 0 -font "Inconsolata:size 18" -opacity 85
+bindsym $mod+d exec ~/.local/bin/xlunch -i ~/.config/xlunch/entries.dsv -G -I 50 -s 64 -f "Inconsolata-Regular/18" -F "Inconsolata-Bold/24" --scroll
 
 # switch between windows
 bindsym $mod+Tab exec rofi -show window -lines 8 -bw 0 -font "Inconsolata:size 18" -opacity 85
