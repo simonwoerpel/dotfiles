@@ -4,6 +4,7 @@ nnoremap Y y$
 let maplocalleader = ','
 
 " move with sneak
+let g:sneak#label = 1
 " replace 'f' with 1-char Sneak
 nmap f <Plug>Sneak_f
 nmap F <Plug>Sneak_F
