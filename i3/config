@@ -43,7 +43,7 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -opacity "50" -bw 0 -bc "#040405" -bg "#040405" -fg "#c5c8c6" -hlbg "#040405" -hlfg "#ffffff" -font 'Inconsolata:size 18'
 # bindsym $mod+d exec ~/.i3/rofi.sh
 # bindsym $mod+d exec rofi -show run -lines 8 -bw 0 -font "Inconsolata:size 18" -opacity 85
-bindsym $mod+d exec ~/.local/bin/xlunch -i ~/.config/xlunch/entries.dsv -G -I 50 -s 64 -f "Inconsolata-Regular/18" -F "Inconsolata-Bold/24" --scroll
+bindsym $mod+d exec ~/.local/bin/xlunch -i ~/.config/xlunch/entries.dsv -I 50 -s 64 -f "Inconsolata-Regular/18" -F "Inconsolata-Bold/24" --scroll
 
 # switch between windows
 bindsym $mod+Tab exec rofi -show window -lines 8 -bw 0 -font "Inconsolata:size 18" -opacity 85
@@ -254,12 +254,17 @@ bindsym $mod+Shift+x mode "$mode_system"
 # xrandr mode
 set $mode_xrandr Xrandr (b) büro, (s) solo, (h) home
 mode "$mode_xrandr" {
-    bindsym b exec --no-startup-id xrandr --output VGA1 --mode 1920x1080 --right-of LVDS1 --output LVDS1 --mode 1280x800 --rate 60.18, mode "default"
-    bindsym s exec --no-startup-id xrandr --output VGA1 --off --output LVDS1 --mode 1280x800 --rate 60.18, mode "default"
-    bindsym h exec --no-startup-id xrandr --output DVI-0 --mode 1920x1080 --rate 60.00 --output VGA-0 --mode 1920x1080 --rate 60.00 --right-of DVI-0, mode "default"
+    bindsym b exec --no-startup-id ~/.screenlayout/office.sh, mode "default"
+    # bindsym b exec --no-startup-id xrandr --verbose --output DP3-1 --mode 1920x1080 --rate 60.00 --output eDP1 --mode 2560x1440 --rate 60.00 --right-of DP3-1, mode "default"
+    # bindsym b exec --no-startup-id xrandr --output DP3-3 --mode 1280x1024 --rate 60.00 --output DP3-1 --mode 1920x1080 --rate 60.00 --right-of DP3-3 --output eDP1 --mode 2560x1440 --rate 60.00 --right-of DP3-1, mode "default"
+    bindsym s exec --no-startup-id ~/.screenlayout/solo.sh, mode "default"
+    # bindsym h exec --no-startup-id xrandr --output DVI-0 --mode 1920x1080 --rate 60.00 --output VGA-0 --mode 1920x1080 --rate 60.00 --right-of DVI-0, mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+
+
 
 bindsym $mod+Shift+s mode "$mode_xrandr"
 
@@ -333,8 +338,8 @@ client.urgent #cc241d #cc241d #ebdbb2 #282828
 
 
 # screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 
 # gnome integration

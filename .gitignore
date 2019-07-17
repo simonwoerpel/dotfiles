@@ -16,3 +16,4 @@
 !config/vimb/style.css
 !config/compton.conf
 !rofi/*
+!screenlayout/*
