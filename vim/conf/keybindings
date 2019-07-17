@@ -19,3 +19,7 @@ xmap t <Plug>Sneak_t
 xmap T <Plug>Sneak_T
 omap t <Plug>Sneak_t
 omap T <Plug>Sneak_T
+
+" git blame
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+

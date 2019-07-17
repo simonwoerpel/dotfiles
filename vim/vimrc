@@ -19,6 +19,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'kshenoy/vim-signature'
 " Plugin 'fholgado/minibufexpl.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'zivyangll/git-blame.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'airblade/vim-gitgutter'
 " Plugin 'majutsushi/tagbar'
@@ -32,13 +33,13 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'chrisbra/csv.vim'
 " appearance
 " Plugin 'altercation/vim-colors-solarized'
-" Plugin 'morhetz/gruvbox'
-Plugin 'arcticicestudio/nord-vim'
+Plugin 'morhetz/gruvbox'
+" Plugin 'arcticicestudio/nord-vim'
 " Plugin 'Yggdroot/indentLine'
 " Plugin 'junegunn/goyo.vim'
 " Plugin 'junegunn/limelight.vim'
 " Plugin 'vim-airline/vim-airline'
-Plugin 'itchyny/lightline.vim'
+" Plugin 'itchyny/lightline.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'simonwoerpel/vim-snippets'
 
@@ -46,21 +47,25 @@ Plugin 'simonwoerpel/vim-snippets'
 " Plugin 'kchmck/vim-coffee-script'
 " Plugin 'pangloss/vim-javascript'
 Plugin 'othree/yajs.vim'
+Plugin 'styled-components/vim-styled-components'
+
 " Plugin 'wookiehangover/jshint.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'nicklasos/vim-jsx-riot'
 Plugin 'moll/vim-node'
 Plugin 'ternjs/tern_for_vim'
+Plugin 'prettier/vim-prettier'
 " Plugin 'godlygeek/tabular'
 " Plugin 'plasticboy/vim-markdown'
+Plugin 'neo4j-contrib/cypher-vim-syntax'
 
 " less/css/scss
-Plugin 'groenewege/vim-less'
-Plugin 'cakebaker/scss-syntax.vim'
+" Plugin 'groenewege/vim-less'
+" Plugin 'cakebaker/scss-syntax.vim'
 
 " html5
-Plugin 'othree/html5-syntax.vim'
-Plugin 'othree/html5.vim'
+" Plugin 'othree/html5-syntax.vim'
+" Plugin 'othree/html5.vim'
 
 " misc
 Plugin 'tpope/vim-surround.git'
@@ -81,6 +86,7 @@ Plugin 'scrooloose/syntastic'
 " python
 Plugin 'davidhalter/jedi-vim'
 Plugin 'tell-k/vim-autopep8'
+Plugin 'fisadev/vim-isort'
 
 " jinja2
 Plugin 'Glench/Vim-Jinja2-Syntax'
@@ -131,7 +137,7 @@ set smartindent
 set expandtab
 
 " when using the >> or << commands, shift lines by 4 spaces
-set shiftwidth=4
+" set shiftwidth=4
 
 " show a visual line under the cursor's current line
 set cursorline
@@ -162,8 +168,10 @@ set splitright
 set background=dark
 " set t_Co=256
 " let g:solarized_termcolors=256
-let g:nord_italic_comments = 1
-colorscheme nord
+" let g:nord_italic_comments = 1
+" colorscheme nord
+let g:gruvbox_italic = 1
+colorscheme gruvbox
 
 " " powerline
 " python from powerline.vim import setup as powerline_setup
@@ -174,7 +182,7 @@ set laststatus=2
 
 " TAGBAR
 " mapping
-nmap <F9> :TagbarToggle<CR>
+" nmap <F9> :TagbarToggle<CR>
 
 " SOURCE
 " source ~/.vim/conf/autocomplete
