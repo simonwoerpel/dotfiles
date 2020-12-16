@@ -18,7 +18,7 @@ set $mod Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 # font pango:DejaVu Sans Mono 8
-font pango:Inconsolata 14
+font pango:Cascadia Code 11
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -43,7 +43,7 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -opacity "50" -bw 0 -bc "#040405" -bg "#040405" -fg "#c5c8c6" -hlbg "#040405" -hlfg "#ffffff" -font 'Inconsolata:size 18'
 # bindsym $mod+d exec ~/.i3/rofi.sh
 # bindsym $mod+d exec rofi -show run -lines 8 -bw 0 -font "Inconsolata:size 18" -opacity 85
-bindsym $mod+d exec ~/.local/bin/xlunch -i ~/.config/xlunch/entries.dsv -I 50 -s 64 -f "Inconsolata-Regular/18" -F "Inconsolata-Bold/24" --scroll
+bindsym $mod+d exec ~/.local/bin/xlunch -i ~/.config/xlunch/entries.dsv -I 50 -s 64 -f "Cascadia/16" -F "Cascadia/20" --scroll
 
 # switch between windows
 bindsym $mod+Tab exec rofi -show window -lines 8 -bw 0 -font "Inconsolata:size 18" -opacity 85
@@ -212,7 +212,7 @@ for_window [class="^lxrandr$"] floating enable; border pixel 0
 workspace_auto_back_and_forth yes
 
 # screenshot
-bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Bilder/screenshots/'
+bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f /tmp/'
 
 # application shortcuts
 bindsym $mod+y exec uxterm -e ~/.local/bin/vifm
@@ -235,6 +235,7 @@ bindsym $mod+u exec ~/.i3/usb.sh
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (d) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id sh ~/.i3/i3lock.sh, mode "default"
+    # bindsym l exec --no-startup-id bash ~/.i3/scrlock.sh, mode "default"
     bindsym e exec sh -c '[ $(echo "NO\nYES" | dmenu -fn "Inconsolata:size=18" -nb "#928374" -sb "#282828"  -nf "#282828" -sf "#928374" -i -p "Logout?") = "YES" ] && i3-msg exit', mode "default"
     # bindsym e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. All unsaved data will be lost.' -b 'Yes, exit i3' 'i3-msg exit'", mode "default"
     bindsym s exec --no-startup-id sh ~/.i3/i3lock.sh, mode default; exec --no-startup-id /bin/systemctl suspend, mode "default"
@@ -250,23 +251,6 @@ mode "$mode_system" {
 }
 
 bindsym $mod+Shift+x mode "$mode_system"
-
-# xrandr mode
-set $mode_xrandr Xrandr (b) büro, (s) solo, (h) home
-mode "$mode_xrandr" {
-    bindsym b exec --no-startup-id ~/.screenlayout/office.sh, mode "default"
-    # bindsym b exec --no-startup-id xrandr --verbose --output DP3-1 --mode 1920x1080 --rate 60.00 --output eDP1 --mode 2560x1440 --rate 60.00 --right-of DP3-1, mode "default"
-    # bindsym b exec --no-startup-id xrandr --output DP3-3 --mode 1280x1024 --rate 60.00 --output DP3-1 --mode 1920x1080 --rate 60.00 --right-of DP3-3 --output eDP1 --mode 2560x1440 --rate 60.00 --right-of DP3-1, mode "default"
-    bindsym s exec --no-startup-id ~/.screenlayout/solo.sh, mode "default"
-    # bindsym h exec --no-startup-id xrandr --output DVI-0 --mode 1920x1080 --rate 60.00 --output VGA-0 --mode 1920x1080 --rate 60.00 --right-of DVI-0, mode "default"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-
-
-
-bindsym $mod+Shift+s mode "$mode_xrandr"
 
 # styling
 new_window none
@@ -357,4 +341,4 @@ exec --no-startup-id dbus-send \
     "string:i3" \
     "string:$DESKTOP_AUTOSTART_ID"
 
-exec i3-msg restart
+# exec i3-msg restart

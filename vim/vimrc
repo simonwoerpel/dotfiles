@@ -46,11 +46,12 @@ Plugin 'simonwoerpel/vim-snippets'
 " JS
 " Plugin 'kchmck/vim-coffee-script'
 " Plugin 'pangloss/vim-javascript'
-Plugin 'othree/yajs.vim'
-Plugin 'styled-components/vim-styled-components'
+" Plugin 'othree/yajs.vim'
+" Plugin 'styled-components/vim-styled-components'
 
 " Plugin 'wookiehangover/jshint.vim'
-Plugin 'mxw/vim-jsx'
+Plugin 'yuezk/vim-js'
+" Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'nicklasos/vim-jsx-riot'
 Plugin 'moll/vim-node'
 Plugin 'ternjs/tern_for_vim'
@@ -84,7 +85,7 @@ Plugin 'scrooloose/syntastic'
 " Plugin 'ervandew/screen'
 
 " python
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'fisadev/vim-isort'
 
