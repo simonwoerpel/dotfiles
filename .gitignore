@@ -4,16 +4,9 @@
 !vim/conf/*
 !oh-my-zsh/custom/*
 !install.sh
-!xorg/*
 !i3/*
 !zsh/*
-!conky/*
 !mutt/*
-!xcolors/*
 !config/dunst/*
-!config/privoxy/*
-!config/vimb/config
-!config/vimb/style.css
 !config/compton.conf
 !rofi/*
-!screenlayout/*
