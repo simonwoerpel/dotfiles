@@ -216,7 +216,8 @@ bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f /tmp/'
 
 # application shortcuts
 bindsym $mod+y exec uxterm -e ~/.local/bin/vifm
-bindsym $mod+c exec chromium
+#bindsym $mod+c exec chromium
+bindsym $mod+c exec firefox
 bindsym $mod+m exec i3-sensible-terminal -e neomutt
 
 bindsym $mod+t exec i3-input -F 'mark %s' -l 1 -P 'tag: '
